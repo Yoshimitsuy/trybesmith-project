@@ -7,4 +7,10 @@ async function createProduct(product: IProduct) {
   return data;
 }
 
-export default { createProduct };
+async function getAll(): Promise<IProduct[]> {
+  const data = await productModel.getAll();
+
+  return data;
+}
+
+export default { createProduct, getAll };
